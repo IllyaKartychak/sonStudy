@@ -6,6 +6,7 @@ text_pro_kota = (
 )
 print(
     text_pro_kota.replace("Барсик", "Barsik"),
-    text_pro_kota.count("Петро"),
+    f"{text_pro_kota.count("Петро")=}",
+    f"{2+2=}",
     sep="\n",
 )
