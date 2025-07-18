@@ -2,7 +2,7 @@
 address = "Rybnitsa\U0001f3e0"
 flag = "\U0001f1f2"
 print(ord(flag))
-smart_flag = "flag 127474"
-print(smart_flag)
-smart_flag2 = f"{flag} 127474"
+smart_address = address + " " + flag
+print(smart_address)
+smart_flag2 = f"{address} {flag}"
 print(smart_flag2)
