@@ -22,5 +22,5 @@ print(phrase[:5], phrase[-3:])
 
 
 colors = ["red", "green", "blue", "yellow"]
-concreted_colours = colors[0], colors[1], colors[3]
+concreted_colours = [colors[0], colors[1], colors[3]]
 print(concreted_colours)
