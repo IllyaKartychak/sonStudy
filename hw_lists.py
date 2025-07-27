@@ -1,5 +1,3 @@
-from multiprocessing.forkserver import set_forkserver_preload
-
 my_things = ["backpack"]
 friend_things = ["backpack"]
 
