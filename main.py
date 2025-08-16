@@ -1,65 +1,84 @@
-first_bank_bill = 3500
-second_bank_bill = 1250
-together_in_two_banks = first_bank_bill + second_bank_bill
-print(together_in_two_banks)
-
-quantity = 23
-price = 17
-cost = 23 * 17
-print(cost)
-
-my_money = 58
-price_of_ice_cream = 8
-ice_cream_i_can_buy = my_money // price_of_ice_cream
-print(ice_cream_i_can_buy)
-
-some_number = 250.0
-op = some_number.is_integer()
-print(op)
-
-one_side = 12
-square_of_square = one_side**2
-print(square_of_square)
-
-price_of_pizza = 340
-everyone_may_to_pay = price_of_pizza / 2
-print(everyone_may_to_pay)
-
-phone_number = "     0991234567 "
-normal_phone_number = phone_number.strip()
-print(normal_phone_number)
+def multiply_numbers(a: int, b: int) -> int:
+    add_numbers_result = a * b
+    return add_numbers_result
 
 
-cost_of_product = "2500"
-cost_of_product = float(cost_of_product)
-final_cost = cost_of_product + 300
-print(final_cost)
+def greet_person(name: str = "Гість") -> str:
+    return f"Привіт, {name}!"
 
-registration = input("Enter your name ")
-print(registration.upper())
 
-email1 = "Test@Gmail.com"
-email2 = "test@gmail.com"
-email3 = email1 == email2
-print(email3)
+def get_max_number(numbers: list[int]) -> int:
+    return max(numbers)
 
-year1 = 2020
-year2 = 2025
-if year1 > year2:
-    print("Current year is 2020")
-else:
-    print("Current year is 2025")
 
-one_side1 = 5
-square_of_cube = 5**3
-print(square_of_cube)
+print(get_max_number(numbers=[12, 25]))
 
-quantity_of_seconds = 12345
-quantity_of_hours = quantity_of_seconds // 3600
-print(quantity_of_hours)
 
-some_number2 = 987
-if some_number2 % 3 == 0:
-    print("True")
-else:
-    print("False")
+def is_even(number: int) -> bool:
+    return number % 2 == 0
+
+
+print(is_even(number=21))
+
+
+def reverse_string(text: str) -> str:
+    reversed_string = text[::-1]
+    return reversed_string
+
+
+print(reverse_string(text="reversed_string"))
+
+
+def calculate_average(numbers: list[float]) -> float:
+    summa = 0
+    quantity_of_numbers = 0
+    for number in numbers:
+        summa += number
+        quantity_of_numbers += 1
+    average = summa / quantity_of_numbers
+    return average
+
+
+def is_palindrome(text: str) -> bool:
+    return text == text[::-1]
+
+
+print(is_palindrome(text="оно"))
+
+
+def add_person_to_list(people: list[str], person: str) -> list[str]:
+    people_list = people + [person]
+    return people_list
+
+
+print(add_person_to_list(people=["Max", "John"], person="Tolik"))
+
+
+def count_vowels(text: str) -> int:
+    ukrainian_vowels = {"а", "е", "и", "і", "о", "у", "ю", "я", "є", "ї"}
+    english_vowels = {"a", "e", "i", "o", "u"}
+    ukrainian_count = 0
+    english_count = 0
+    text_lower = text.lower()
+
+    for letter in text_lower:
+        if letter in ukrainian_vowels:
+            ukrainian_count += 1
+        if letter in english_vowels:
+            english_count += 1
+    return ukrainian_count + english_count
+
+
+some_text = "jghikhgjgchmnhnkguyikhryfgjhjikfyikdngkhbjolguрароаншевншолпрлбдшзщве7сшоегкансзднесгуенгревшангщн"
+vowels = count_vowels(some_text)
+print(vowels)
+
+# °C = (°F - 32) / 1.8
+
+
+def fahrenheit_to_celsius(fahrenheit: float) -> float:
+    celsius = (fahrenheit - 32) / 1.8
+    return celsius
+
+
+print(fahrenheit_to_celsius(fahrenheit=40))
